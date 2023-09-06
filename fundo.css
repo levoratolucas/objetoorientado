@@ -1,0 +1,46 @@
+.container{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    
+    
+}
+.bolhas{
+    position: absolute;
+    display: flex;
+    
+    
+
+}
+.bolhas span{
+    width: 30px;
+    height: 30px;
+    background-color: chartreuse;
+    margin-left: 10px;
+    border-radius: 50%;
+    box-shadow:0 0 0 10px rgba(128, 255, 0, 0.401),
+    0 0  20px rgba(128, 255, 0),
+    0 0  50px rgba(128, 255, 0),
+    0 0  100px rgba(128, 255, 0);
+    animation: movimento calc(89s / var(--i)) linear infinite;
+}
+.bolhas span:nth-of-type(even){
+    
+    background: rgba(255, 0, 55);
+    box-shadow:0 0 0 10px rgba(255, 0, 55, 0.401),
+    0 0  20px rgba(255, 0, 55),
+    0 0  50px rgba(255, 0, 55),
+    0 0  100px rgba(255, 0, 55);
+}
+@keyframes movimento{
+    0%{transform: translateY(100vh) scale(0);
+        z-index: -1;}
+    33%{transform: translateY(60vh) scale(0.7);
+       }
+    66%{transform: translateY(25vh) scale(0.3);
+        z-index: -1;}
+    100%{transform: translateY(-10vh) scale(1);
+    }
+
+}
